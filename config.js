@@ -40,6 +40,7 @@ module.exports = {
     baseURL: "http://localhost:8080", // base url
     failureURL: "http://localhost:8080", // failure redirect url
     port: "8080", // port to run the bot on
+    style: 'dark'// theme of the dashboard. [Options: light/dark]. Can edit in dashboard/public/dist/css/custom.css
   },
 
   ECONOMY: {
@@ -66,6 +67,14 @@ module.exports = {
         secure: false,
       },
     ],
+    resuming: { // resumeConfiguration
+      key: "resume_the_music_idc", // your key[can be anything]
+      timeout: 60000 // after 60 seconds the bot will not resume.
+    },
+    reconnect: { // reconnectConfiguration
+      tries: 10,
+      delay: 10000
+    },
   },
 
   GIVEAWAYS: {
